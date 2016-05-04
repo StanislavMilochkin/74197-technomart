@@ -1,7 +1,195 @@
 body {
-    font-size:;
-    line-height:;
-    color:;
-    font-weight:;
-    font-family:;      
+  min-width: 1200px;
+  min-height: 3151px;
+  margin: 0;
+  padding: 0;      
+}
+.clearfix::after {
+  content: "";
+
+  display: table;
+  clear: both;
+}
+main-header {
+    
+}
+.container {
+    width: 940px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+.user-navigation {
+    width: 940px;
+    border: 2px solid red; 
+}
+.logo {
+    float: left;
+    width: 220px;          
+}
+.search {
+    float: left;
+    width: 270px;
+    
+}
+.bookmarks {
+    float: right;
+    width: 140px;
+}
+.basket {
+    float: right;
+    width: 160px
+    
+}
+.order {
+    float: right;
+    width: 150px;
+    
+}
+.information {
+    width: 940px;
+    border: 2px solid red;
+}
+.information-text {
+    float: left;
+    width: 200px;
+    height: 60px;
+}
+.information-phone {
+    float: left;
+    width: 270px;
+    height: 70px;
+    margin: auto;
+}
+.user-block {
+    float: right;
+}
+.main-navigation {
+    width: 940px;
+    border: 2px solid red;
+}
+.main-navigation ul {
+    list-style-type: none;
+}
+.main-navigation li {
+    display: inline-block;
+    padding-left: 50px;
+    text-align: center;
+}
+.main-container {
+    width: 940px;
+    padding: 0 10px;
+    margin: 0 auto;
+    border: 2px solid red;
+}
+.assortment {
+    min-width: 940px;
+    border: 2px solid red;
+    margin-bottom: 40px;
+}
+.block {
+    float: left;
+}
+.materials {
+    width: 300px;
+    height: 123px;
+    background: #f6b22d;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.instrument {
+    width: 300px;
+    height: 123px;
+    background: #4aafde;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.technics {
+    width: 300px;
+    height: 123px;
+    background: #cc79d1;
+    margin-bottom: 20px;
+}
+.banner {
+    float: left;
+}
+.discount {
+    width: 300px;
+    height: 123px;
+    background: #85d179;
+    float: right;
+    margin-bottom: 20px;
+}
+.delivery {
+    width: 300px;
+    height: 123px;
+    background: #f6b22d;
+    float: right;       
+}
+.popular-product {
+    width: 940px;
+    margin-bottom: 20px;
+}
+.description {
+    background: #f7f3ec;
+    height: 89px;
+    margin-bottom: 20px;
+}
+.description-topic {
+    float: left;
+}
+.popular-btn {
+    float: right
+}
+.bosch-product {
+    width: 220px;
+    height: 318px;
+    float: left;
+    border: dotted solid red;
+    margin-right: 20px;
+}
+.bosch-product:nth-child(5n){
+    margin-right: 0;
+}
+.popular-producers {
+    clear: both;
+    width: 940px;
+    margin-bottom: 20px;
+}
+.product-logo {
+    float: left;
+    width: 220px;
+    height: 145px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.product-logo:nth-child(4n+5) {
+    margin-right: 0;
+}
+.service {
+    clear: both;
+}
+.service-text {
+    width: 400px;
+    
+}
+.img {
+    float: right;
+}
+.shadow {
+    float: right;
+}
+.footer-navigation1 {
+    width: 940px;
+    padding: 0 10px;
+    margin: 0 auto;
+    height: 60px;
+}
+.footer-navigation1 ul {
+    list-style-type: none;
+}
+.footer-navigation1 li {
+    display: inline-block;
+}
+.footer-navigation2 {
+    clear: both;
 }
