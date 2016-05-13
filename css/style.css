@@ -2,9 +2,63 @@ body {
    font-weight: 700;
    font-size: 16px;
    line-height: 23px;
-   font-family: "PT Sans", "Cuprum", "Arial", sans-serif;
-        
+   font-family: "PT Sans", "Cuprum", "Arial", sans-serif;   
 }
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+
+  font-family: "symbols-technomart";
+  src: url("../fonts/symbols-technomart.woff") format("woff"),
+       url("../fonts/symbols-technomart.woff2") format("woff2");
+}
+
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
+  display: inline-block;
+  width: 1em;
+  margin-right: 0.2em;
+  margin-left: 0.2em;
+
+  font-weight: normal;
+  line-height: 1em;
+  font-family: "symbols-technomart";
+  text-align: center;
+  text-transform: none;
+  text-decoration: inherit;
+  font-style: normal;
+  font-variant: normal;
+
+  speak: none;
+}
+
+.icon-left::before { content: "\3c"; } /* "&lt;" */
+.icon-right::before { content: "\3e"; } /* "&gt;" */
+.icon-basket::before { content: "\62"; } /* "b" */
+.icon-facebook::before { content: "\66"; } /* "f" */
+.icon-twitter::before { content: "\74"; } /* "t" */
+.icon-vk::before { content: "\76"; } /* "v" */
+.icon-up::before { content: "\2c4"; } /* "˄" */
+.icon-down::before { content: "\2c5"; } /* "˅" */
+.icon-left-big::before { content: "\2190"; } /* "←" */
+.icon-right-big::before { content: "\2192"; } /* "→" */
+.icon-login::before { content: "\2386"; } /* "⎆" */
+.icon-logout::before { content: "\241b"; } /* "␛" */
+.icon-up-dir::before { content: "\25b2"; } /* "▲" */
+.icon-down-dir::before { content: "\25bc"; } /* "▼" */
+.icon-circle::before { content: "\25cb"; } /* "○" */
+.icon-circle-dot::before { content: "\25cf"; } /* "●" */
+.icon-star::before { content: "\2605"; } /* "★" */
+.icon-check-off::before { content: "\2610"; } /* "☐" */
+.icon-check-on::before { content: "\2611"; } /* "☑" */
+.icon-youtube::before { content: "\f39e"; } /* "" */
+.icon-home::before { content: "🏠"; } /* "\1f3e0" */
+.icon-user::before { content: "👨"; } /* "\1f468" */
+.icon-phone::before { content: "📞"; } /* "\1f4de" */
+.icon-instagramm::before { content: "📷"; } /* "\1f4f7" */
+.icon-search::before { content: "🔍"; } /* "\1f50d" */
+.icon-bookmark::before { content: "🔖"; } /* "\1f516" */
+
 .clearfix::after {
    content: "";
 
@@ -13,7 +67,6 @@ body {
 }
 .main-header {
     min-height: 320px;
-    margin-bottom: 60px;
     background-color: #f1f5f7;
     
 }
@@ -25,6 +78,31 @@ body {
     height: 42px;
     background-color: #293449;
     color: #ffffff;
+}
+.icon-basket {
+    opacity: 0.6;
+}
+.icon-basket:hover {
+    opacity: 1;
+}
+.icon-bookmark {
+    opacity: 0.6;
+}
+.icon-bookmark:hover {
+    opacity: 1;
+}
+.icon-search {
+    opacity: 0.6;
+}
+.icon-search:hover {
+    opacity: 1;
+}
+.icon-login {
+    opacity: 0.6;
+}
+.icon-login:hover {
+    color: black;
+    opacity: 1;
 }
 .logo {
     float: left;
@@ -43,7 +121,8 @@ body {
 }
 .search {
     display: inline-block;
-    padding: 13px 48px;
+    padding: 13px 0;
+    padding-left: 50px;
     padding-right: 160px;
     font-size: 17px;
     line-height: 18px;
@@ -57,32 +136,36 @@ body {
 }
 .bookmarks {
     display: inline-block;
-    padding: 13px 28px;
     padding-left: 44px;
-    font-size: 17px;
+    padding: 13px 28px;
     line-height: 18px;
     vertical-align: top;
     font-family: "Cuprum";
+    font-weight: 400;
 }
 .bookmarks a {
-    font-weight: 400;
+    font-size: 17px;
     text-decoration: none;
     color: #ffffff;
+    padding: 13px 0;
+    padding-left: 20px;
+    width: 130px;
 }
 .basket {
     display: inline-block;
-    padding: 13px 30px;
-    padding-left: 50px;
-    font-size: 17px;
+    padding: 13px 0;
+    padding-left: 20px;
     line-height: 18px;
     vertical-align: top;
     font-family: "Cuprum";
+    font-weight: 400;
     
 }
 .basket a {
-    font-weight: 400;
     text-decoration: none;
     color: #ffffff;
+    font-size: 17px;
+    padding: 13px 30px;
 }
 .order {
     display: inline-block;
@@ -128,6 +211,7 @@ body {
     line-height: 24px;
     text-align: left;
     margin-top: 60px;
+
 }
 .information-phone a {
     text-decoration: none;
@@ -155,7 +239,7 @@ body {
     margin-left: 40px;
     margin-right: 10px;
     background: #ffffff;
-    padding: 14px 27px;
+    padding: 12px 27px;
     padding-left: 50px;
 }
 .user-block a:hover {
@@ -195,7 +279,201 @@ body {
 }
 .main-container {
     width: 940px;
+    max-height: 1370;
+    padding-top: 60px;
     margin: 0 auto;
+    margin-bottom: 60px;
+}
+.content {
+    padding-top: 21px;
+    padding-bottom: 59px;
+    text-align: center;
+    font-family: "Cuprum";
+    width: 940px;
+    max-height: 1370;
+    margin: 0 auto;
+}
+.breadcrumbs {
+    display: block;
+    padding-left: 54px;
+    text-align: left;
+    font-family: "Cuprum";
+    margin-bottom: 20px;
+}
+.breadcrumbs a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: PT Sans,Arial,sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    vertical-align: top;
+    margin-right: 41px;
+    margin-bottom: 20px
+    font-weight: 400;
+    line-height: 18px;
+    font-size: 13px;
+}
+.content h1 {
+    text-transform: uppercase;
+    font-family: "Cuprum";
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 30px 0;
+    padding-left: 28px;
+    background-color: #f2f6f8;
+    text-align: left;
+}
+.catalog-navigation {
+    display: block;
+    background-color: #f7f3ec;
+    border-radius: 3px;
+    padding: 10px 0;
+    padding-left: 18px;
+    margin-bottom: 20px;
+}
+.sortirovka {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    text-transform: uppercase;
+    font-family: "PT Sans";
+    text-align: left;
+    margin-bottom: 0;
+}
+.sortirovka span {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    text-transform: uppercase;
+    font-family: "PT Sans";
+    margin-right: 140px;
+    text-align: left;
+}
+.sortirovka a {
+    color: #ee3643;
+    text-decoration: none;
+    margin-right: 63px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    text-transform: uppercase;
+    font-family: "PT Sans";
+    text-align: left;
+}
+.sortirovka a:nth-child(4) {
+    margin-right: 25px;
+}
+
+.arrow {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 21px;
+}
+.arrow a {
+    display: inline-block;
+    width: 11px;
+    height: 10px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+}
+.icon-up-dir {
+    width: 11px;
+    height: 10px;
+    color: red;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+}
+.icon-down-dir {
+    width: 11px;
+    height: 10px;
+    color: red;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+}
+.catalog-container {
+    display: block
+}
+.column-left {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    width: 220px;
+    text-align: left;
+    font-family: "Cuprum";
+}
+.column-left span {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px 0;
+    padding-left: 18px;
+    text-transform: uppercase;
+    font-family: "PT Sans";
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    background-color: #f7f3ec;
+    border-radius: 3px;
+}
+.price span {
+    display: block;
+    margin: 0;
+    margin-bottom: 14px;
+    padding: 0;
+    text-transform: uppercase;
+    font-family: "PT Sans";
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: left;
+    background: #ffffff;
+}
+.price input[type=text] {
+    width: 80px;
+}
+.price div {
+    display: inline-block;
+    width: 13px;
+    margin: 0;
+    padding: 0;
+}
+.brands {
+    display: block;
+    padding-top: 16px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #e5e5e5;
+    text-align: left;
+    font-family: "Cuprum";
+}
+.brands span {
+    display: block;
+    margin: 0;
+    margin-bottom: 14px;
+    padding: 0;
+    text-transform: uppercase;
+    font-family: "PT Sans";
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: left;
+}
+.view {
+    margin-top: 20px;
+}
+.column-right {
+    max-width: 700px;
+    float: right;
+    
 }
 .assortment {
     min-width: 940px;
@@ -211,7 +489,7 @@ body {
     padding-left: 22px;
 }
 .assortment a { /*-- не пойму как ее переместить вниз--*/
-    display: inline-block;
+    display: block;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 400;
@@ -225,6 +503,8 @@ body {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     padding: 10px 0;
+    margin-bottom: 20px;
+    margin-left: 20px;
 }
 .block {
     float: left;
@@ -310,22 +590,79 @@ body {
     background: #ca2c37; 
 }
 .bosch-product {
+    position: relative;
     width: 218px;
     height: 318px;
     float: left;
     border: 1px solid #e5e5e5;
     margin-right: 20px;
     margin-bottom: 20px;
+    text-align: center;
+}
+new:before {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 60px;
+    height: 60px;
+    content: '';
+    background: #000;
+    background: url(/img/new%20flag.png) no-repeat 0 0;
+}
+.bosch-product .action {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 218px;
+    height: 88px;
+    padding: 40px 0;
+    background-color: #fff; 
+}
+.actions .buy,
+.actions .bookmark {
+    font-family: 'Cuprum', 'Arial', sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+    width: 135px;
+    margin: 0 auto 7px;
+    padding: 10px 0;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 3px;
+    background-color: #63a63e;
+}
+.actions .buy {
+  box-shadow: inset 0 -3px 0 #367315;
+}
+.actions .bookmark {
+    width: 129px;
+    padding: 7px 0;
+    color: #63a63e;
+    border: 3px solid #63a63e;
+    background-color: #fff;
+}
+.bosch-product .action {
+      display: none;
+}
+.bosch-product:hover .action {
+    display: block;
+}
+.bosch-product-image {
+    width: 218px;
+    height: 168px;
+    overflow: hidden;
 }
 .bosch-product img {
-    display: block;
-    text-align: center;
-    margin: 0 auto;
+    max-width: 100%;
 }
 .bosch-product .name {
     display: inline-block;
-    padding: 0 30px;
-    margin-bottom: 12px;
+    padding: 0 25px;
+    margin-bottom: 15px;
     min-height: 40px;
     font-size: 18px;
     line-height: 20px;
@@ -334,8 +671,8 @@ body {
 }
 .bosch-product .strike {
     display: block;
-    margin-bottom: 11px;
-    min-height: 17px;
+    margin-bottom: 10px;
+    min-height: 20px;
     text-transform: uppercase;
     text-decoration: line-through;
     text-align: center;
@@ -362,20 +699,163 @@ body {
     line-height: 17px;
 }
 .bosch-product .btn {
-    display: inline-block;
-    margin: 0;
-    padding: 10px 0;
+    position: relative;
+    width: 80px;
+    margin: 0 auto 20px;
+    padding: 10px 30px;
     text-align: center;
     color: #ffffff;
     background-color: #ee3643;
     border-radius: 3px;
     z-index: 1000;
 }
+.bosch-product .btn: after {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    width: 0;
+    height: 0;
+    content: '';
+    border: 20px solid #000;
+    border: 20px solid #fff;
+    border-left-color: #ee3643;
+}
 .popular-producers {
     clear: both;
     width: 940px;
     margin-bottom: 20px;
     margin-top: 20px;
+}
+.bosch-product2 {
+    position: relative;
+    width: 218px;
+    height: 318px;
+    float: left;
+    border: 1px solid #e5e5e5;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+new:before {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 60px;
+    height: 60px;
+    content: '';
+    background: #000;
+    background: url(/img/new%20flag.png) no-repeat 0 0;
+}
+.bosch-product2 .action {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 218px;
+    height: 88px;
+    padding: 40px 0;
+    background-color: #fff; 
+}
+.actions .buy,
+.actions .bookmark {
+    font-family: 'Cuprum', 'Arial', sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+    width: 135px;
+    margin: 0 auto 7px;
+    padding: 10px 0;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 3px;
+    background-color: #63a63e;
+}
+.actions .buy {
+  box-shadow: inset 0 -3px 0 #367315;
+}
+.actions .bookmark {
+    width: 129px;
+    padding: 7px 0;
+    color: #63a63e;
+    border: 3px solid #63a63e;
+    background-color: #fff;
+}
+.bosch-product2 .action {
+      display: none;
+}
+.bosch-product2:hover .action {
+    display: block;
+}
+.bosch-product-image {
+    width: 218px;
+    height: 168px;
+    overflow: hidden;
+}
+.bosch-product2 img {
+    max-width: 100%;
+}
+.bosch-product2 .name {
+    display: inline-block;
+    padding: 0 25px;
+    margin-bottom: 15px;
+    min-height: 40px;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    color: #000;
+}
+.bosch-product2 .strike {
+    display: block;
+    margin-bottom: 10px;
+    min-height: 20px;
+    text-transform: uppercase;
+    text-decoration: line-through;
+    text-align: center;
+    font-size: 17px;
+    line-height: 17px;
+    color: #999;
+    font-family: PT Sans;
+}
+.bosch-product2 .strike:nth-child(3) {
+    margin: 0;
+    padding: 0;
+}
+.bosch-product2:nth-child(3n){
+    margin-right: 0;
+}
+.bosch-product2 a {
+    padding-left: 34px;
+    padding-right: 37px;
+    width: auto;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: PT Sans;
+    font-size: 17px;
+    line-height: 17px;
+}
+.bosch-product2 .btn {
+    position: relative;
+    width: 80px;
+    margin: 0 auto 20px;
+    padding: 10px 30px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #ee3643;
+    border-radius: 3px;
+    z-index: 1000;
+}
+.bosch-product2 .btn: after {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    width: 0;
+    height: 0;
+    content: '';
+    border: 20px solid #000;
+    border: 20px solid #fff;
+    border-left-color: #ee3643;
 }
 .product-logo {
     float: left;
@@ -563,7 +1043,7 @@ body {
 .bottom-description-right img {
     width: 295px;
     height: 158px;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 .bottom-description-right a {
     width: 295px;
@@ -582,69 +1062,241 @@ body {
 }
 .bottom-description-right a:hover {
     background: #ca2c37;
-footer {                         /*думаю с футером проблем не будет*/
-    max-width: 940px;
-    min-height: 64px;
-    margin: 0 auto; 
 }
-.footer-navigation1 {
-    margin-bottom: 20px;
+.pagination {
+    display: block;
+    text-align: left;
+    font-family: "Cuprum";
 }
-.footer-navigation1 ul {
+.pagination ul {
     list-style-type: none;
+    padding-left: 0;
+    
 }
-.footer-navigation1 li {
+.pagination li {
     display: inline-block;
     padding: 10px 20px;
     margin-right: 10px;
     text-align: center;
+    background: red;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    font-family: "Cuprum";
+}
+.container-bottom {
+    display: block;
+    text-align: center;
+    font-family: "Cuprum";
+    padding: 69px 0;
+    background-color: #f2f6f8;
+}
+.container-bottom h2 {
+    display: block;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    text-transform: uppercase;
+    font-family: "Cuprum";
+    margin: 0;
+    margin-bottom: 29px;
+    padding: 0;
+}
+.container-bottom p {
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 24px;
+    font-family: "PT Sans";
+    text-align: left;
+}
+footer {/*думаю с футером проблем не будет*/
+    width: 940px;
+    margin: 0 auto; 
+    padding: 0 auto;
+    text-align: center;
+}
+.footer-navigation1 {
+    background-color: #32425c;
+}
+.footer-navigation1 .logo {
+    display: inline-block;
+    margin-bottom: 33px;
+    padding: 19px 0 15px;
+    width: 220px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: top;
+    color: #fff;
+    letter-spacing: .85px;
+    background-color: #ee3643;
+    font-family: "Cuprum"     
+}
+.logo-navigation ul { /* как сделать подчеркивание при наведение?*/
+    list-style-type: none;
+    text-align: right;
+    font-family: "Cuprum";
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.logo-navigation li  {
+    display: inline-block;
+    margin-left: 60px;
+    margin-top: 39px;
+    margin-bottom: 35px;
+    color: #ffffff;
+}
+.logo-navigation a {
+    color: #ffffff;
+    text-decoration: none;
 }
 .adres-tel {
     float: left;
     width: 220px;
     height: 30px;
 }
+
 .footer-navigation2 {
-    margin-bottom: 30px;
+    background-color: #32425c; 
+    padding-bottom: 49px;
+}
+.footer-navigation2 .adres {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #ffffff;
+    font-family: "Cuprum";
+}
+.footer-navigation2 .tel {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #ffffff;
+    font-family: "Cuprum";
+}
+
+.logo-navigation2 ul {
+    list-style-type: none;
+    text-align: right;
+    font-family: "Cuprum";
+    margin-top: 0;
+}
+.logo-navigation2 li  {
+    display: inline-block;
+    list-style-type: disc;
+    margin-left: 60px;
+    margin-bottom: 35px;
+    color: #ffffff;
     
 }
-.footer-navigation2 ul {
-    list-style-type: none;
-}
-.footer-navigation2 li {
-    float: left;
-    display: inline-block;
-    padding: 10px 20px;
-    margin-right: 10px;
-    text-align: center;
+.logo-navigation2 a {
+    color: #f5ca7e;
+    text-decoration: none;
+    vertical-align: top;
 }
 .footer-social {
-    min-height: 108px;
+    display: inline-block;
+    background-color: #293449;
+    min-width: 940px;
+    height: 108px;
+    color: #ffffff;
 }
 .warning {
     float: left;
-    height: 30px;
-    width: 230px;
+    width: 225px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-right: 150px;
+    padding-top: 38px;
+    padding-bottom: 34px;
+    text-align: left;
+    font-family: "Cuprum"
 }
 .social {
     float: left;
-    margin-left: 100px;
+    text-align: left;
+    vertical-align: top;
+    padding-top: 35px;
+    width: 250px;
+    color: #ffffff;
+    font-family: "Cuprum"; 
 }
 .vfi {
-    float: left;
-    width: 40px;
-    height: 40px;
-    background: red;
-    margin-right: 10px;
+    display: inline-block;
+}
+.vfi a {
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    background-color: #212a3a;
+    margin-right: 3px;
     border-radius: 100%;
-        
+    text-align: center;
+}
+.vfi .icon-vk {
+    color: #ffffff;
+    text-align: center;
+}
+.vfi .icon-facebook {
+    color: #ffffff;
+    text-align: center;
+}
+.vfi .icon-instagramm {
+    color: #ffffff;
+    text-align: center;
+}
+.vfi a:hover {
+    background: #ee3643; 
 }
 .communication1 {
     float: left;
-    width: 120px;
-    margin-left: 100px; 
+    font-family: "Cuprum";
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+    padding-top: 37px;
+    width: 150px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+}
+.communication1 a {
+    text-decoration: none;
+    color: #ffd180;
+}
+.communication2 a {
+    text-decoration: none;
+    color: #ffd180;
 }
 .communication2 {
     float: right;
-    width: 120px;
+    font-family: "Cuprum";
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+    padding-top: 37px;
+    padding-left: 35px;
+    width: 115px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
 }
