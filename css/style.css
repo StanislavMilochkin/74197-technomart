@@ -685,7 +685,7 @@ new:before {
     margin: 0;
     padding: 0;
 }
-.bosch-product:nth-child(6n){
+.bosch-product:nth-child(5){
     margin-right: 0;
 }
 .bosch-product a {
