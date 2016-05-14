@@ -589,28 +589,64 @@ body {
 .description a:hover {
     background: #ca2c37; 
 }
-.bosch-product {
+item item--ribbon {
+      border: 1px solid #e5e5e5;
+}
+.item {
+    display: inline-block;
     position: relative;
     width: 218px;
-    height: 318px;
-    float: left;
+    height: 15px;
+    box-sizing: border-box;
+    background-color: #fff;
+    text-decoration: none;
     border: 1px solid #e5e5e5;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    padding: 15px;
     text-align: center;
 }
-new:before {
-    position: absolute;
-    top: -1px;
-    right: -1px;
-    top: 0;
-    right: 0;
-    z-index: 10;
-    width: 60px;
-    height: 60px;
-    content: '';
-    background: #000;
-    background: url(/img/new%20flag.png) no-repeat 0 0;
+.item--ribbon:before {
+  content: '';
+  height: 60px;
+  width: 60px;
+  background: url(/img/new%20flag.png) center center no-repeat;
+  
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;  
+}
+.item-thumb { 
+  height: 200px;
+  background-color: coral;
+  
+  position: relative;
+}
+.item-thumb img {
+ position: absolute; 
+  
+ left: 50%;
+ top: 50%;
+ transform: translate(-50%, -50%);  
+}
+.item-buy {
+  height: 215px;
+  border: 1px solid red;
+  
+  position: absolute;  
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0; 
+  
+  display: none;
+}
+.buy {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  
+  transform: translate(0, -50%);
 }
 .bosch-product .action {
     position: absolute;
@@ -648,7 +684,7 @@ new:before {
 .bosch-product .action {
       display: none;
 }
-.bosch-product:hover .action {
+.item:hover.item-buy {
     display: block;
 }
 .bosch-product-image {
