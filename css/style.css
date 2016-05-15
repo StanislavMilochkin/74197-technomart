@@ -395,6 +395,12 @@ body {
     text-transform: uppercase;
     font-family: "PT Sans";
     text-align: left;
+    opacity: 0.6;
+    border-bottom: 1px dotted red;
+}
+.sort-active {
+    color: red;
+    text-decoration: none;
 }
 .sortirovka a:nth-child(4) {
     margin-right: 25px;
@@ -555,19 +561,19 @@ body {
     position: absolute;
     right: 42px;
     top: 30px;
-    z-index: 1;
+    z-index: 3;
     color: #fff;
 }
 /*.materials:before {
-  content: '';
-  height: 60px;
-  width: 60px;
-  background: url(/img/new%20flag.png) center center no-repeat;
-  
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 2;
+    content: '';
+    height: 60px;
+    width: 60px;
+    background: url(/img/new%20flag.png) center center no-repeat; 
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    color: #fff;
 }*/
 .block materials a {
     background: #dda028;
@@ -696,6 +702,9 @@ body {
 item item--ribbon {
       border: 1px solid #e5e5e5;
 }
+item2 item--ribbon {
+      border: 1px solid #e5e5e5;
+}
 .item {
     display: inline-block;
     position: relative;
@@ -709,12 +718,25 @@ item item--ribbon {
     text-align: center;
     margin-right: 18px;
 }
-.item--ribbon:before {
+.item2 {
+    display: inline-block;
+    position: relative;
+    width: 218px;
+    height: 316px;
+    box-sizing: border-box;
+    background-color: #fff;
+    text-decoration: none;
+    border: 1px solid #e5e5e5;
+    padding: 15px;
+    text-align: center;
+    margin-right: 18px;
+    margin-bottom: 20px;
+}
+.item--ribbon-new:before {
   content: '';
   height: 60px;
   width: 60px;
   background: url(/img/new%20flag.png) center center no-repeat;
-  
   position: absolute;
   right: 0;
   top: 0;
@@ -734,17 +756,14 @@ item item--ribbon {
 }
 .item-buy {
   height: 215px;
-  border: 1px solid red;
-  
   position: absolute;  
   left: 0;
   top: 0;
   right: 0;
   bottom: 0; 
-  
-  display: none;
+  /*display: none;*/
 }
-.buy {
+.actions {
   position: absolute;
   top: 50%;
   left: 0;
@@ -752,7 +771,16 @@ item item--ribbon {
   
   transform: translate(0, -50%);
 }
-.bosch-product .action {
+.item .action {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 218px;
+    height: 88px;
+    padding: 40px 0;
+    background-color: #fff; 
+}
+.item2 .action {
     position: absolute;
     top: 0;
     left: 0;
@@ -785,21 +813,17 @@ item item--ribbon {
     border: 3px solid #63a63e;
     background-color: #fff;
 }
-.bosch-product .action {
-      display: none;
-}
-.item:hover.item-buy {
-    display: block;
-}
-.bosch-product-image {
-    width: 218px;
-    height: 168px;
-    overflow: hidden;
-}
-.bosch-product img {
-    max-width: 100%;
-}
 .item .name {
+    display: inline-block;
+    padding: 0 25px;
+    margin-bottom: 10px;
+    min-height: 40px;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    color: #000;
+}
+.item2 .name {
     display: inline-block;
     padding: 0 25px;
     margin-bottom: 10px;
@@ -824,7 +848,22 @@ item item--ribbon {
 /*.item .strike:nth-child(3) {
    
 }*/
+.item2 .strike {
+    display: block;
+    margin-bottom: 10px;
+    min-height: 20px;
+    text-transform: uppercase;
+    text-decoration: line-through;
+    text-align: center;
+    font-size: 17px;
+    line-height: 18px;
+    color: #999;
+    font-family: "PT Sans";
+}
 .item:nth-child(5){
+    margin-right: 0;
+}
+.item2:nth-child(3n){
     margin-right: 0;
 }
 .item .btn {
@@ -838,7 +877,29 @@ item item--ribbon {
     border-radius: 3px;
     z-index: 1000;
 }
+.item2 .btn {
+    position: relative;
+    width: 80px;
+    margin: 0 auto 20px;
+    padding: 8.5px 33px 8.5px 28px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #ee3643;
+    border-radius: 3px;
+    z-index: 1000;
+}
 .item .btn:after {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    width: 0;
+    height: 0;
+    content: '';
+    border: 20px solid #000;
+    border: 20px solid #fff;
+    border-left-color: #ee3643;
+}
+.item2 .btn:after {
     position: absolute;
     top: 0;
     right: -20px;
@@ -1055,15 +1116,16 @@ item item--ribbon {
     clear: both;
     position: relative;
 }
-.btn-discription:after {
+.service:after {
     content: '';
     width: 10px;
     height: 280px;
     background: url(/img/line.png) center center no-repeat;
     position: absolute;
-    right: 10px;
-    top: 5px;
-    z-index: 1;
+    right: 700px;
+    top: 205px;
+    color: #fff;
+    z-index: 3;
 }
 .service-btn {
     float: left;
@@ -1085,6 +1147,10 @@ item item--ribbon {
     background: #32425c;
     color: #fff;
     border-top: 1px solid #293449;
+}
+.service-btn a:hover {
+    background: #f2f6f8;
+    color: #fff;
 }
 .service-btn .active {
     background: #fff;
