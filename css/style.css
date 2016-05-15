@@ -886,6 +886,7 @@ item2 item--ribbon {
     color: #ffffff;
     background-color: #ee3643;
     border-radius: 3px;
+    font-family: "PT Sans";
     z-index: 1000;
 }
 .item .btn:after {
@@ -1060,7 +1061,7 @@ item2 item--ribbon {
 }
 .service {
     display: inline-block;
-    width: 940px;
+    margin: 0 auto;
     height: 521px;
     background-color: #f2f6f8;
     padding-top: 65px;
@@ -1352,14 +1353,20 @@ item2 item--ribbon {
     font-family: "PT Sans";
     text-align: left;
 }
-footer {/*думаю с футером проблем не будет*/
+footer {
+     background-color: #32425c;
+}
+footer-social-container {
+    background-color: #293449;
+}
+.footer-container {
     width: 940px;
-    margin: 0 auto; 
-    padding: 0 auto;
-    text-align: center;
+    margin: 0 auto;
+    
 }
 .footer-navigation1 {
     background-color: #32425c;
+    margin: 0 auto;
 }
 .footer-navigation1 .logo {
     display: inline-block;
@@ -1404,10 +1411,10 @@ footer {/*думаю с футером проблем не будет*/
     width: 220px;
     height: 30px;
 }
-
 .footer-navigation2 {
     background-color: #32425c; 
     padding-bottom: 49px;
+    margin: 0 auto;
 }
 .footer-navigation2 .adres {
     display: block;
@@ -1454,9 +1461,8 @@ footer {/*думаю с футером проблем не будет*/
     vertical-align: top;
 }
 .footer-social {
-    display: inline-block;
     background-color: #293449;
-    min-width: 940px;
+    margin: 0 auto;
     height: 108px;
     color: #ffffff;
 }
