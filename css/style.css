@@ -91,6 +91,9 @@ body {
 .icon-bookmark:hover {
     opacity: 1;
 }
+.icon-bookmark:active {
+    opacity: 0.6;
+}
 .icon-search {
     opacity: 0.6;
 }
@@ -159,15 +162,19 @@ body {
     font-size: 17px;
     text-decoration: none;
     color: #ffffff;
-    padding: 13px 18px;
+    padding: 11px 18px;
     width: 130px;
+}
+.bookmarks a:active {
+    background-color: #161d29;
+    color: #8b8e94;
 }
 .bookmarks .icon-bookmark {
     padding-right: 14px;
 }
 .basket {
     display: inline-block;
-    padding: 13px 0;
+    padding: 11px 0px;
     line-height: 18px;
     vertical-align: top;
     font-family: "Cuprum";
@@ -178,7 +185,11 @@ body {
     text-decoration: none;
     color: #ffffff;
     font-size: 17px;
-    padding: 13px 30px 13px 25px;
+    padding: 11px 30px 11px 25px;
+}
+.basket a:active {
+    background-color: #161d29;
+    color: #8b8e94;
 }
 .basket .icon-basket {
     padding-right: 17px;
@@ -196,14 +207,16 @@ body {
     font-weight: 400;
     text-decoration: none;
     color: #ffffff;
-    padding: 12px 14px;
+    padding: 11px 14px;
     font-size: 17px;
 }
 .order:hover {
     background: #5fbb2d;
 }
 .order:active {
-    opacity: 0,6;
+    background-color: #518534;
+    color: #8b8e94;
+    
 }
 .information {
     width: 940px;
@@ -273,11 +286,14 @@ body {
 .user-block a:hover {
     color: #f0515c;
 }
+.user-block a:active {
+    color: #c5c5c5;
+}
 .user-block .registration{
     padding: 12px 25px;
     background: #ffffff;
 }
-.main-navigation {  /*<!-- не могу сделать затемнение текста opacity:-->*/
+.main-navigation { 
     width: 940px;
     float: left;
     background-color: #32425c;
@@ -306,6 +322,9 @@ body {
 .main-navigation a:hover {
     background: #293449;
 }
+.main-navigation a:active {
+    color: #8e939c;
+}
 .main-container {
     width: 940px;
     max-height: 1370;
@@ -324,7 +343,6 @@ body {
 }
 .breadcrumbs {
     display: block;
-    padding-left: 54px;
     text-align: left;
     font-family: "Cuprum";
     margin-bottom: 20px;
@@ -332,17 +350,122 @@ body {
 .breadcrumbs a {
     text-decoration: none;
     text-transform: uppercase;
-    font-family: PT Sans,Arial,sans-serif;
+    font-family: "PT Sans";
     font-size: 13px;
     font-weight: 400;
     line-height: 18px;
     text-align: left;
-    vertical-align: top;
-    margin-right: 41px;
     margin-bottom: 20px
     font-weight: 400;
     line-height: 18px;
     font-size: 13px;
+    color: black;
+    padding-right: 15px;
+}
+.brands .big {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: left;
+    font-family: "PT Sans";
+    text-transform: uppercase;
+}
+.brands input[type=checkbox]+label {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    font-family: "PT Sans";
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    padding-left: 35px;
+    position: relative;
+}
+.view .big {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 30px;
+    margin-bottom: 13px;
+    text-transform: uppercase;
+    font-family: "PT Sans";
+}
+.view label {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    padding-left: 35px;
+    text-transform: uppercase;
+    font-family: "PT Sans";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+}
+input[type="checkbox"] {
+    display: none;
+}
+input[type="checkbox"]+label {
+    display: block;
+    margin: 10px 0;
+    padding-left: 45px;
+    line-height: 20px;
+    position: relative;
+}
+input[type="checkbox"]+label::before {
+    content: "\2610";
+    font-family: "symbols-technomart";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    font-size: 24px;
+    color: #c1c1c1;
+}
+input[type="checkbox"]:checked+label::before {
+    content: "\2611";
+    color: #c1c1c1;
+}
+input[type="radio"] {
+    display: none;
+}
+input[type="radio"]+label {
+    display: block;
+    margin: 10px 0;
+    padding-left: 45px;
+    line-height: 20px;
+    position: relative;
+}
+input[type="radio"]+label::before {
+    content: "\25cb";
+    font-family: "symbols-technomart";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    font-size: 24px;
+    color: #c1c1c1;
+}
+input[type="radio"]:checked+label::before {
+    content: "\25cf";
+    color: #c1c1c1;
+}
+.icon-home {
+    vertical-align: top;
+    font-size: 16px;
+    line-height: 20px;
+    color: #c1c6ce;
+    padding-right: 14px;
+}
+.icon-right {
+   color: #c1c6ce;
+    padding-right: 15px;
 }
 .content h1 {
     text-transform: uppercase;
@@ -473,12 +596,94 @@ body {
     text-align: left;
     background: #ffffff;
 }
+.range-filter {
+  width: 240px;
+  margin: 50px auto;
+}
+
+.range-controls {
+  position: relative;
+  height: 41px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background: #f1f1f1;
+}
+
+.range-controls .scale {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  width: 180px;
+  height: 2px;
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+    position: absolute;
+  width: 70%;
+  top: 50%;
+  height: 2px;
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  width: 4px;
+  height: 4px;
+  cursor: pointer;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  background: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+}
+
+.range-controls .toggle-min {
+  left: 10px;
+}
+
+.range-controls .toggle-max {
+  left: 180px;
+  margin-left: -20px;
+}
+
+.price-controls {
+  font-size: 0;
+}
+
+.price-controls label {
+  font-size: 16px;
+  display: inline-block;
+  width: 50%;
+}
+
+.max-price {
+  text-align: right;
+}
+
+.price-controls input {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 16px;
+  width: 60px;
+  padding: 8px 10px;
+  text-align: center;
+  color: #283136;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background: #f1f1f1;
+}
 .price input[type=text] {
     width: 80px;
 }
 .price div {
     display: inline-block;
-    width: 13px;
+    width: 220px;
+    height: 80px;
     margin: 0;
     padding: 0;
 }
@@ -540,6 +745,18 @@ body {
     padding: 10px 0;
     margin-top: 15px;
     margin-left: 25px;
+}
+.assortment .yellow {
+    background-color: #dda028;
+}
+.assortment .blye {
+    background-color: #429dc7;
+}
+.assortment .grin {
+    background-color: #77bc6d;
+}
+.assortment .pink {
+    background-color: #b76dbc;
 }
 .block {
     float: left;
@@ -699,6 +916,9 @@ body {
 .description a:hover {
     background: #ca2c37; 
 }
+.description a:active {
+    background: #ba2732;
+}
 item item--ribbon {
       border: 1px solid #e5e5e5;
 }
@@ -756,12 +976,13 @@ item2 item--ribbon {
 }
 .item-buy {
   height: 215px;
-  position: absolute;  
+  position: absolute; 
+  border: 1px solid red;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0; 
-  /*display: none;*/
+  display: none;
 }
 .actions {
   position: absolute;
@@ -791,7 +1012,7 @@ item2 item--ribbon {
 }
 .actions .buy,
 .actions .bookmark {
-    font-family: 'Cuprum', 'Arial', sans-serif;
+    font-family: 'Cuprum';
     font-size: 14px;
     text-decoration: none;
     display: block;
@@ -1150,7 +1371,7 @@ item2 item--ribbon {
     border-top: 1px solid #293449;
 }
 .service-btn a:hover {
-    background: #f2f6f8;
+    background: #293449;
     color: #fff;
 }
 .service-btn .active {
@@ -1257,6 +1478,9 @@ item2 item--ribbon {
 .bottom-description-left a:hover {
     background: #ca2c37;
 }
+.bottom-description-left a:active {
+    background-color: #ba2732;
+}
 .bottom-description-right {
     display: inline-block;
     margin: 0;
@@ -1304,6 +1528,9 @@ item2 item--ribbon {
 .bottom-description-right a:hover {
     background: #ca2c37;
 }
+.bottom-description-right a:active {
+    background-color: #ba2732;
+}
 .pagination {
     display: block;
     text-align: left;
@@ -1315,18 +1542,45 @@ item2 item--ribbon {
     
 }
 .pagination li {
+    list-style: none;
     display: inline-block;
-    padding: 10px 20px;
-    margin-right: 10px;
     text-align: center;
-    background: red;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px;
     font-family: "Cuprum";
 }
+.pagination a {
+    list-style: none;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    margin-right: 10px;
+    padding: 10px 0 8px;
+    width: 36px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    font-family: "PS Sans"
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+}
+.pagination .pagination-btn-text {
+    width: 138px;
+}
+.pagination .pagination-btn-active {
+    color: #fff;
+    background: red;
+}
 .container-bottom {
+    clear: both;
     display: block;
     text-align: center;
     font-family: "Cuprum";
@@ -1385,7 +1639,7 @@ footer-social-container {
     background-color: #ee3643;
     font-family: "Cuprum"     
 }
-.logo-navigation ul { /* как сделать подчеркивание при наведение?*/
+.logo-navigation ul { 
     list-style-type: none;
     text-align: right;
     font-family: "Cuprum";
@@ -1402,9 +1656,15 @@ footer-social-container {
 .logo-navigation li:hover {
     text-decoration: underline;
 }
+.logo-navigation li:active {
+    text-decoration: none;
+}
 .logo-navigation a {
     color: #ffffff;
     text-decoration: none;
+}
+.logo-navigation a:active {
+    color: #5f6c80;
 }
 .adres-tel {
     float: left;
@@ -1460,6 +1720,9 @@ footer-social-container {
     text-decoration: none;
     vertical-align: top;
 }
+.logo-navigation2 a:active {
+    color: #92856d;
+}
 .footer-social {
     background-color: #293449;
     margin: 0 auto;
@@ -1469,6 +1732,10 @@ footer-social-container {
 .logo-navigation2 li:hover {
      text-decoration: underline;
 }
+.logo-navigation2 li:active {
+    text-decoration: none;
+}
+
 .warning {
     float: left;
     width: 225px;
@@ -1577,12 +1844,20 @@ footer-social-container {
 .communication1 a:hover {
      text-decoration: underline;
 }
+.communication1 a:active {
+    text-decoration: none;
+    color: #e13643;
+}
 .communication2 a {
     text-decoration: none;
     color: #ffd180;
 }
 .communication2 a:hover {
      text-decoration: underline;
+}
+.communication2 a:active {
+    text-decoration: none;
+    color: #e13643;
 }
 .communication2 {
     float: right;

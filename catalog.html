@@ -50,7 +50,7 @@
                 <div class="main-navigation">
                     <ul>
                         <li>
-                            <a href="#">Главная</a>
+                            <a href="http://127.0.0.1:49230/tehnomart.html#">Главная</a>
                         </li>
                         <li>
                             <a href="#">Компания</a>
@@ -76,9 +76,9 @@
         </header>
         <main class="content">
             <div class="breadcrumbs">
-                <a href="#"><span class="icon-home"></span>Каталог<span class="icon-right"</span></a>
-                <a href="#">Инструмент</a>
-                <a href="#">Перфораторы</a>
+                <a href="#"><span class="icon-home"></span><span class="icon-right"></span>Каталог</a>
+                <a href="#"><span class="icon-right"></span>Инструмент</a>
+                <a href="#"><span class="icon-right"></span>Перфораторы</a>
             </div>
                 <h1>Перфораторы</h1>
             <div class="catalog-container">
@@ -87,20 +87,30 @@
                     <form>
                         <div class="price">
                             <span>Цена:</span>
-                            <div class="diapason"><!-- не понятно как делать-->
-                            </div>
-                            <input type="text" id="min" value="0">
-                            <div>-</div>
-                            <input type="text" id="max" value="30 000">
+                            <form action="form.php" method="GET">
+                              <div class="range-filter">
+                                <div class="range-controls">
+                                  <div class="scale">
+                                    <div class="bar" style="width: 80%"></div>
+                                  </div>
+                                  <div class="toggle toggle-min"></div>
+                                  <div class="toggle toggle-max"></div>
+                                </div>
+                                <div class="price-controls">
+                                  <label class="min-price"><input name="min-price" type="text" value="0"></label>
+                                  <label class="max-price"><input name="max-price" type="text" value="30 000"></label>
+                                </div>
+                              </div>
+                            </form>
                         </div>
                         <div class="brands">
-                            <span>Производители:</span>
+                            <div class="big">Производители:</div>
                             <div>
                                 <input type="checkbox" name="bosch" id="bosch" checked>
                                 <label for="brand-bosch">BOSCH</label>
                             </div>
                             <div>
-                                <input type="checkbox" name="interscol" id="interscol" checked>
+                                <input type="checkbox" name="interscol" id="interscol">
                                 <label for="interscol">Интерскол</label>
                             </div>
                             <div>
@@ -108,16 +118,16 @@
                                 <label for="makita">Makita</label>
                             </div>
                             <div>
-                                <input type="checkbox" name="devalt" id="devalt" checked>
+                                <input type="checkbox" name="devalt" id="devalt">
                                 <label for="dewalt">Devalt</label>
                             </div>
                             <div>
-                                <input type="checkbox" name="hitachi" id="hitachi" checked>
+                                <input type="checkbox" name="hitachi" id="hitachi">
                                 <label for="hitachi">Hitachi</label>
                             </div>
                         </div>
                         <div class="view">
-                            <span>Питание:</span>
+                            <div class="big">Питание:</div>
                             <div>
                                 <input type="radio" name="view" id="accumulator" checked>
                                 <label for="accumulator">Аккумуляторные</label>
@@ -231,7 +241,7 @@
                     <div class="pagination clearfix">
                         <ul>
                             <li>
-                                <a class="pagination-btn">1</a>
+                                <a class="pagination-btn-active">1</a>
                             </li>
                             <li>
                                 <a class="pagination-btn" href="#">2</a>
@@ -240,7 +250,7 @@
                                 <a class="pagination-btn" href="#">3</a>
                             </li>
                             <li>
-                                <a class="pagination-btn" href="#">Следующая</a>
+                                <a class="pagination-btn-text" href="#">Следующая</a>
                             </li>
                         </ul>
                     </div>
